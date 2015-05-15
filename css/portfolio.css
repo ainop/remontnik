@@ -1,0 +1,59 @@
+/*
+	INFO: I suppose that grid has 34 columns: small picture width is 10 units, gap is 1.
+	I make wrap with padding, so, wrap has 33 cols: 1 unit is 1/33 -> 3.03%.
+*/
+.portfolio {
+	width: 75%;
+	min-width: 720px;
+	max-width: 900px;
+	margin: auto;
+	padding-left: 2.95%;
+	background: #efefef;
+	font: 16px normal 'PT Sans', sans-serif;
+}
+	.portfolio__title {
+		font-size: 36px;
+		margin-bottom: 36px;
+	}
+
+	.portfolio__items {
+		overflow: hidden;
+	}
+
+	.portfolio__item {
+		float: left;
+		position: relative;
+	}
+
+	.portfolio__item_4,
+	.portfolio__item_5 {
+		clear: both;
+	}
+
+	.portfolio__item_6 {
+		float: none;
+		overflow: hidden;
+	}
+
+	/*
+		FIXME: Major problem is spreading layout rules
+		between portfolio layout cells and portfolio items,
+		so items know, that they should be absolutely positioned.
+		But this hack is inevitable if we want gallery to stretch.
+	*/
+	.portfolio__item {
+		width: 30.3%;
+		padding-bottom: 22.72%;
+		margin: 0 3.03% 3.03% 0;
+	}
+
+	.portfolio__item_0 {
+		width: 96.97%;
+		padding-bottom: 74.24%;
+	}
+
+	.portfolio__item_7,
+	.portfolio__item_6 {
+		width: 63.63%;
+		padding-bottom: 48.48%;
+	}
