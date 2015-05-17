@@ -1,0 +1,24 @@
+<div class="portfolio">
+	<div class="portfolio__title">Ремонт квартир и домов</div>
+	<div class="portfolio__items">
+		<div class="portfolio__item portfolio__item_{{ $index % 10 }}" ng-repeat="item in results">
+			<div class="item" background="{{ item.images[0].image_large }}">
+				<div class="item__caption">
+					<div class="item__photos" ng-if="$index % 10 === 0">{{ item.images.length }}</div>
+
+					<div class="item__master-icon master" ng-if="$index % 10 === 0">
+						<span class="master__pic" background="{{ item.contractor.picture || '/static/images/master.png' }}"></span>
+					</div>
+
+					<div class="master item__master-name" ng-if="$index % 10 === 0 || $index % 10 === 6 || $index % 10 === 7">
+						<span class="master__name">{{ item.contractor.full_name }}</span>
+						<span class="master__confirmed" ng-if="item.contractor.is_documents_confirmed"></span>
+					</div>
+
+					<div class="item__title" title="{{ item.title }}">{{ item.title }}</div>
+				</div>
+			</div>
+		</div>
+		<span ng-show="loading">loading&hellip;</span>
+	</div>
+</div>

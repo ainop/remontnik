@@ -1,6 +1,8 @@
 angular.module('portfolio.directives', [])
-	.directive('background', function (staticHost) {
-		return function(scope, element, attrs){
-			element.css('background-image', 'url(' + staticHost + attrs.background +')');
+	.directive('portfolio', function () {
+		return {
+			restrict: 'E',
+			controller: 'PortfolioCtrl',
+			templateUrl: 'portfolio/portfolio.html'
 		};
 	});
