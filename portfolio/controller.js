@@ -1,6 +1,6 @@
 angular.module('portfolio.controller', ['portfolio.service'])
 	.controller('PortfolioCtrl', function ($scope, portfolioService) {
-		$scope.page = 0;
+		$scope.page = 1;
 		$scope.results = [];
 
 		$scope.more = function () {
